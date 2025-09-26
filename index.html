@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BOQ Card</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="card">
+  <!-- Top Row: Bank name + Logo/Contactless -->
+  <div class="card-header">
+    <span class="bank-name">BANK OF QUEENSLAND</span>
+    <div class="logo-container">
+      <!-- ✅ Only one contactless icon (rotated) -->
+      <svg class="contactless-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+        <path fill="white" d="M7.5 3A13.5 13.5 0 0 1 20 15.5l-1.4 1.4A11.5 11.5 0 0 0 9 4.9L7.5 3M7.5 7A9.5 9.5 0 0 1 16 15.5l-1.4 1.4A7.5 7.5 0 0 0 9 8.9L7.5 7M7.5 11A5.5 5.5 0 0 1 12 15.5l-1.4 1.4A3.5 3.5 0 0 0 9 12.9L7.5 11Z"/>
+      </svg>
+      <img src="boq-logo.png" class="boq-logo" alt="BOQ Logo">
+    </div>
+  </div>
+
+  <!-- Chip -->
+  <div class="chip"></div>
+
+  <!-- Card Number (centered under chip) -->
+  <div class="card-number">
+    5275 1341 0246 7843
+  </div>
+
+  <!-- Dates Row -->
+  <div class="dates-row">
+    <div class="valid-from">
+      <span class="label">VALID FROM</span>
+      <span class="date">06/25</span>
+    </div>
+    <div class="valid-thru">
+      <span class="label">VALID THRU</span>
+      <span class="date">05/30</span>
+    </div>
+  </div>
+
+  <!-- Bottom Row: Name + Visa -->
+  <div class="bottom-row">
+    <span class="account-name">PATRICIA ALICE GRECH</span>
+    <div class="visa-container">
+      <span class="visa">VISA</span>
+      <span class="debit">Debit</span>
+    </div>
+  </div>
+</div>
+
+<!-- Activation Section -->
+<div class="activation-section">
+  <!-- ✅ Four separate PIN boxes -->
+  <div class="pin-inputs">
+    <input type="text" maxlength="1" class="pin">
+    <input type="text" maxlength="1" class="pin">
+    <input type="text" maxlength="1" class="pin">
+    <input type="text" maxlength="1" class="pin">
+  </div>
+  <button id="activate-btn" disabled>Activate Card</button>
+  <div id="success" style="display:none;"></div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
